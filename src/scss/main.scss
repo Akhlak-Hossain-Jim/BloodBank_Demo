@@ -1,0 +1,17 @@
+// Base directory imported
+
+@import './base/base';
+@import './base/fonts';
+@import './base/typography';
+
+// component directory imported
+
+@import './components/buttons';
+@import './components/grid';
+
+// page directory imported
+
+@import './pages/welcome';
+@import './pages/gettingStarted';
+@import './pages/signin';
+@import './pages/signup';

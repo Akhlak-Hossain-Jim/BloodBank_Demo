@@ -1,0 +1,17 @@
+a {
+    &.red_w{
+        justify-self: center;
+        font-size: 26px !important;
+        padding: 30px 60px;
+        border-radius: 50px;
+        text-decoration: none;
+        max-width: fit-content;
+        text-align: center;
+        background-color: #C70100;
+        color: #fff;
+        @media (max-width:768px) {
+            font-size: 20px !important;
+            padding: 24px 50px;
+        }
+    }
+}
