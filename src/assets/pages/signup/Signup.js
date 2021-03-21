@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "../image/logo512.png";
+import logo from "../../image/logo512.png";
 import VisibilityIcon from "@material-ui/icons/Visibility";
 
 function Signup() {
@@ -26,7 +26,7 @@ function Signup() {
               placeholder="jhondoe"
             />
           </label>
-          <label for="fname">
+          <label for="email">
             Email <br />
             <input
               type="email"
@@ -35,7 +35,7 @@ function Signup() {
               placeholder="jhondoe@gmail.com"
             />
           </label>
-          <label for="lname">
+          <label for="password">
             Password <br />
             <input
               type="password"
@@ -48,7 +48,7 @@ function Signup() {
             className="visibility_icon"
             style={{ color: "red" }}
           />
-          <Link className="c_width" to="/start">
+          <Link className="c_width" to="/signup/step2/">
             Next
           </Link>
         </form>

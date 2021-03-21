@@ -34,7 +34,7 @@ function Signin() {
             className="visibility_icon"
             style={{ color: "red" }}
           />
-          <Link className="c_width" to="/start">
+          <Link className="c_width" to="/Dashboard/">
             Login
           </Link>
         </form>
@@ -43,7 +43,11 @@ function Signin() {
         </a>
         <p>
           Don't have an account?&nbsp;
-          <Link className="dark" style={{ color: "#ADADAD" }} to="/signup">
+          <Link
+            className="dark"
+            style={{ color: "#ADADAD" }}
+            to="/signup/step1/"
+          >
             Sign Up
           </Link>
         </p>
