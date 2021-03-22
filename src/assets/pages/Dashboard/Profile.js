@@ -20,34 +20,8 @@ import profileImage from "../../image/avater1.jpg";
 
 // Componets
 
-function Badge(props) {
-  return (
-    <div className="grid_parent j_center badge">
-      <div className="rounded_demo"></div>
-      <span className="badge_name">{props.name}</span>
-    </div>
-  );
-}
-
-function Appoinment({ month, day, hospitalName, quantity, dayLeft }) {
-  return (
-    <div className="appoinment">
-      <div className="date">
-        <div className="month">{month}</div>
-        <h1>{day}</h1>
-      </div>
-      <div className="hospital_name">
-        <h6>{hospitalName}</h6>
-        <div className="quantity">
-          <span>{quantity}</span>Bag Blood
-        </div>
-      </div>
-      <div className="day_left">
-        <span>{dayLeft}</span> days ago
-      </div>
-    </div>
-  );
-}
+import Badge from "../../components/Badge";
+import Appoinment from "../../components/Appoinment";
 
 function Profile() {
   function navChangei() {
@@ -94,8 +68,10 @@ function Profile() {
         <section className="dashboard twelvehead profile_container grid_parent grid_twelveCol grid_sixRow">
           <header>
             <div className="left_col">
-              <ArrowBackIcon className="toggleico" />
-              <h3>Requests</h3>
+              <Link to="/Dashboard/donations/">
+                <ArrowBackIcon className="toggleico" />
+                <h3>Requests</h3>
+              </Link>
             </div>
             <div className="right_col">
               <div>
@@ -174,7 +150,6 @@ function Profile() {
                 quantity="1"
                 dayLeft="6"
               />
-              <Link to="/Dashboard/donations/">See more...</Link>
             </div>
             <div className="drown" id="request">
               <Appoinment
@@ -198,7 +173,6 @@ function Profile() {
                 quantity="1"
                 dayLeft="6"
               />
-              <Link to="/Dashboard/profile/">See more...</Link>
             </div>
           </section>
           <section className="badges">

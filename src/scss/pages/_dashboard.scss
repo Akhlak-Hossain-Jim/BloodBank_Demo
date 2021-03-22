@@ -1,3 +1,5 @@
+// Dashboard Associated components Style rule
+
 .rounded_demo {
   height: 50px;
   justify-self: center;
@@ -6,8 +8,19 @@
   background-color: #6d6d6d;
 }
 
+.flex_box {
+  display: flex;
+}
+// Drown is used to hide components
+
 .drown {
   display: none;
+}
+
+.small_avater {
+  border-radius: 50%;
+  width: 70px;
+  height: auto;
 }
 
 .j_center {
@@ -51,6 +64,102 @@
   }
 }
 
+.hospital_dBox {
+  box-shadow: 0 0 5px 2px #c0c0c0;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 20px 10px 30px 30px;
+  max-width: 300px;
+  height: fit-content;
+  margin: 10px;
+  .top_icoBox {
+    text-align: right !important;
+    display: flex;
+    justify-content: space-between !important;
+  }
+  .vertico {
+    color: #c70100;
+    font-size: 30px !important;
+    text-align: right !important;
+  }
+  .details_container {
+    display: flex;
+    align-items: center;
+    .sign {
+      padding: 17px;
+      color: #c70100;
+      background-color: #fff;
+      border-radius: 50%;
+      box-shadow: 0 0 5px 2px #c0c0c0;
+    }
+    .h_address {
+      padding-left: 20px;
+      h6 {
+        color: #6d6d6d;
+        font-size: 13px !important;
+        .icons {
+          font-size: 13px !important;
+        }
+      }
+    }
+  }
+}
+
+.history_box {
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #6d6d6d;
+  margin: 20px auto;
+  .serial {
+    background-color: #c70100;
+    color: #fff;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    font-weight: 900 !important;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+  }
+  h4,
+  .times {
+    color: #6d6d6d;
+  }
+}
+
+.review_box {
+  margin: 10px auto;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 5px 2px #c0c0c0;
+  background-color: #fff;
+  max-width: 550px;
+  .name_time {
+    padding-left: 20px;
+    h3 {
+      color: #343434;
+    }
+    h5 {
+      color: #6d6d6d;
+    }
+  }
+  .review {
+    color: #6d6d6d;
+    padding: 10px 0;
+  }
+  .like_reply {
+    justify-content: space-between;
+    padding: 10px 0;
+    font-size: 14px;
+    color: #c70100;
+    .icons {
+      font-size: 14px;
+      margin: 0 10px;
+    }
+  }
+}
+
 .notificationBox {
   display: flex;
   justify-content: space-between;
@@ -58,14 +167,15 @@
   margin: 20px auto;
   padding: 10px;
   border-radius: 20px;
-  box-shadow: 0 0 5px #c0c0c0;
+  box-shadow: 0 0 5px 2px #c0c0c0;
   background-color: #fff;
   .bloodGroup {
     padding: 17px;
     color: #c70100;
+    font-weight: 900 !important;
     background-color: #fff;
     border-radius: 50%;
-    box-shadow: 0 0 5px #c0c0c0;
+    box-shadow: 0 0 5px 2px #c0c0c0;
   }
   .notificationDetaile {
     max-width: 150px !important;
@@ -83,6 +193,8 @@
     color: #6d6d6d;
   }
 }
+
+// Dashboard style rule
 
 div {
   &.dashboard {
@@ -177,6 +289,7 @@ div {
             }
           }
         }
+        // Home Style rules
         section {
           &.rowii_coli {
             grid-column-start: 1;
@@ -254,6 +367,7 @@ div {
             grid-column-end: 13;
           }
         }
+        // Profile Style rules
         &.profile_container {
           section {
             &.profile {
@@ -364,10 +478,48 @@ div {
             }
           }
         }
+        // Donations style rule
+        &.doantion_container {
+          .hospitalDescription {
+            grid-column-start: 1;
+            grid-column-end: 13;
+            padding: 0 20px 0 50px;
+            display: flex;
+            flex-wrap: wrap;
+          }
+          .donation_history {
+            grid-column-start: 1;
+            grid-column-end: 7;
+            grid-row-start: 3;
+            grid-row-end: 6;
+            padding: 20px 20px 20px 50px;
+            .history_container {
+              box-shadow: 0 0 5px 2px #c0c0c0;
+              background-color: #fff;
+              border-radius: 20px;
+              padding: 30px;
+              margin-top: 20px;
+            }
+            .histories {
+              padding-top: 20px;
+            }
+          }
+          .donation_review {
+            grid-column-start: 7;
+            grid-column-end: 13;
+            grid-row-start: 3;
+            grid-row-end: 6;
+            padding: 20px 20px 20px 20px;
+            h2 {
+              padding-bottom: 10px !important;
+            }
+          }
+        }
+        // Notification style rules
         &.notification_container {
           .notifications {
-            grid-column-start: 1;
-            grid-column-end: 5;
+            grid-column-start: 2;
+            grid-column-end: 6;
             padding: 0 10px 10px 10px;
             height: 85vh;
             overflow-y: scroll;
@@ -388,8 +540,8 @@ div {
             }
           }
           .History {
-            grid-column-start: 5;
-            grid-column-end: 9;
+            grid-column-start: 6;
+            grid-column-end: 10;
             border-left: 2px solid #dfdfdf;
             padding: 0 10px 10px 10px;
             height: 85vh;

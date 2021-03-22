@@ -26,7 +26,7 @@ div {
           max-width: 400px;
           text-align: center;
           font-weight: 300 !important;
-          font-size: 35px;
+          font-size: 30px;
           color: #343434;
         }
       }
@@ -64,10 +64,21 @@ div {
                 width: 80px;
                 border-radius: 50%;
                 font-size: 25px !important;
-                padding: 23px;
+                align-items: center;
+                justify-content: center;
                 &.red {
                   color: #fff;
                   background-color: #c70100;
+                }
+                input {
+                  position: absolute;
+                  margin: 0;
+                  padding: 0;
+                  width: 80px;
+                  height: 80px;
+                  outline: none;
+                  opacity: 0 !important;
+                  cursor: pointer;
                 }
               }
             }

@@ -4,8 +4,85 @@ import logo from "../../image/logo512.png";
 // import VisibilityIcon from "@material-ui/icons/Visibility";
 
 function Signupiii() {
-  function select() {
-    document.querySelector("#selectO").classList.toggle("red");
+  function selectA() {
+    document.querySelector("#selectA").classList.add("red");
+    document.querySelector("#selectAi").classList.remove("red");
+    document.querySelector("#selectB").classList.remove("red");
+    document.querySelector("#selectBi").classList.remove("red");
+    document.querySelector("#selectO").classList.remove("red");
+    document.querySelector("#selectOi").classList.remove("red");
+    document.querySelector("#selectAB").classList.remove("red");
+    document.querySelector("#selectABi").classList.remove("red");
+  }
+  function selectAi() {
+    document.querySelector("#selectA").classList.remove("red");
+    document.querySelector("#selectAi").classList.add("red");
+    document.querySelector("#selectB").classList.remove("red");
+    document.querySelector("#selectBi").classList.remove("red");
+    document.querySelector("#selectO").classList.remove("red");
+    document.querySelector("#selectOi").classList.remove("red");
+    document.querySelector("#selectAB").classList.remove("red");
+    document.querySelector("#selectABi").classList.remove("red");
+  }
+  function selectB() {
+    document.querySelector("#selectA").classList.remove("red");
+    document.querySelector("#selectAi").classList.remove("red");
+    document.querySelector("#selectB").classList.add("red");
+    document.querySelector("#selectBi").classList.remove("red");
+    document.querySelector("#selectO").classList.remove("red");
+    document.querySelector("#selectOi").classList.remove("red");
+    document.querySelector("#selectAB").classList.remove("red");
+    document.querySelector("#selectABi").classList.remove("red");
+  }
+  function selectBi() {
+    document.querySelector("#selectA").classList.remove("red");
+    document.querySelector("#selectAi").classList.remove("red");
+    document.querySelector("#selectB").classList.remove("red");
+    document.querySelector("#selectBi").classList.add("red");
+    document.querySelector("#selectO").classList.remove("red");
+    document.querySelector("#selectOi").classList.remove("red");
+    document.querySelector("#selectAB").classList.remove("red");
+    document.querySelector("#selectABi").classList.remove("red");
+  }
+  function selectO() {
+    document.querySelector("#selectA").classList.remove("red");
+    document.querySelector("#selectAi").classList.remove("red");
+    document.querySelector("#selectB").classList.remove("red");
+    document.querySelector("#selectBi").classList.remove("red");
+    document.querySelector("#selectO").classList.add("red");
+    document.querySelector("#selectOi").classList.remove("red");
+    document.querySelector("#selectAB").classList.remove("red");
+    document.querySelector("#selectABi").classList.remove("red");
+  }
+  function selectOi() {
+    document.querySelector("#selectA").classList.remove("red");
+    document.querySelector("#selectAi").classList.remove("red");
+    document.querySelector("#selectB").classList.remove("red");
+    document.querySelector("#selectBi").classList.remove("red");
+    document.querySelector("#selectO").classList.remove("red");
+    document.querySelector("#selectOi").classList.add("red");
+    document.querySelector("#selectAB").classList.remove("red");
+    document.querySelector("#selectABi").classList.remove("red");
+  }
+  function selectAB() {
+    document.querySelector("#selectA").classList.remove("red");
+    document.querySelector("#selectAi").classList.remove("red");
+    document.querySelector("#selectB").classList.remove("red");
+    document.querySelector("#selectBi").classList.remove("red");
+    document.querySelector("#selectO").classList.remove("red");
+    document.querySelector("#selectOi").classList.remove("red");
+    document.querySelector("#selectAB").classList.add("red");
+    document.querySelector("#selectABi").classList.remove("red");
+  }
+  function selectABi() {
+    document.querySelector("#selectA").classList.remove("red");
+    document.querySelector("#selectAi").classList.remove("red");
+    document.querySelector("#selectB").classList.remove("red");
+    document.querySelector("#selectBi").classList.remove("red");
+    document.querySelector("#selectO").classList.remove("red");
+    document.querySelector("#selectOi").classList.remove("red");
+    document.querySelector("#selectAB").classList.remove("red");
+    document.querySelector("#selectABi").classList.add("red");
   }
 
   return (
@@ -22,28 +99,36 @@ function Signupiii() {
         <form action="">
           <h1>What is Your Blood Group</h1>
           <div className="radios grid_parent grid_threeCol">
-            <div className="select" id="selectA+" onClick={select}>
+            <div className="select flex_box" id="selectA" onClick={selectA}>
+              <input type="radio" id="A+" name="A+" value="A+" />
               A+
             </div>
-            <div className="select" id="selectA-" onClick={select}>
+            <div className="select flex_box" id="selectAi" onClick={selectAi}>
+              <input type="radio" id="A-" name="A-" value="A-" />
               A-
             </div>
-            <div className="select" id="selectB+" onClick={select}>
+            <div className="select flex_box" id="selectB" onClick={selectB}>
+              <input type="radio" id="B+" name="B+" value="B+" />
               B+
             </div>
-            <div className="select" id="selectB-" onClick={select}>
+            <div className="select flex_box" id="selectBi" onClick={selectBi}>
+              <input type="radio" id="B-" name="B-" value="B-" />
               B-
             </div>
-            <div className="select" id="selectO" onClick={select}>
+            <div className="select flex_box" id="selectO" onClick={selectO}>
+              <input type="radio" id="O+" name="O+" value="O+" />
               O+
             </div>
-            <div className="select" id="selectO-" onClick={select}>
+            <div className="select flex_box" id="selectOi" onClick={selectOi}>
+              <input type="radio" id="O-" name="O-" value="O-" />
               O-
             </div>
-            <div className="select" id="selectAB+" onClick={select}>
+            <div className="select flex_box" id="selectAB" onClick={selectAB}>
+              <input type="radio" id="AB+" name="AB+" value="AB+" />
               AB+
             </div>
-            <div className="select" id="selectAB-" onClick={select}>
+            <div className="select flex_box" id="selectABi" onClick={selectABi}>
+              <input type="radio" id="AB-" name="AB-" value="AB-" />
               AB-
             </div>
           </div>
