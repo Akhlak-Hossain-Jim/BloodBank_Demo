@@ -46,6 +46,20 @@ Working folder structered in below nasting tree:
 ## Using code 
 
 All codes and style sheets are in the same name. All signUp file styles are defined in a single file named `_signup.scss`. All dashboard styles are defined in `_dashboard.scss` named file. But working with these files is also easy they all have commented names written before rules. I tried to name all class names relative to the component. I tried to define all styles for pages that are so specifically targeted for better usability.
+
+## PWA
+
+I used the PWA template to make the app installable.
+In the `src` folder `index.js` file you will find this line of code
+
+```serviceWorkerRegistration.unregister();```
+
+Edit that to
+
+```serviceWorkerRegistration.register();```
+
+Run `npm run build`.
+
 ## Issues
 
     * This is only a front-end code.
