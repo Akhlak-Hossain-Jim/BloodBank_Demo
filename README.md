@@ -2,6 +2,19 @@
 
 A Blood Donating Companie's Front-end Website 'demo', created by [Akhlak Hossain Jim](http://akhlak-hossain-jim.github.io/) with HTML, (S)CSS, React.js, and icons from Material UI. View Live Demo [here](https://ahj-bloodbank-demo.web.app).
 
+## Viewing the demo
+
+As it is a demo first of all some pages are not finished properly. You can see these pages
+
+* Home or Welcome page -- click `start Journey`.
+* You will land on the Sign In page from there you can view Dashboard by clicking Login Button or instead you can click Sign Up to see Sign up pages.
+* After viewing all Sign-Up pages you will land again on the Sign In page By --click the Login button.
+* You Will land on the Dashboard page --click Profile.
+* You will land on the request page --click <-Request.
+* You will land in the second phase of the profile page --click Notification.
+
+That's all
+
 ## Working With Code
 
 Working with the code is so easy
