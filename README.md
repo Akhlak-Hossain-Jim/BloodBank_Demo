@@ -1,14 +1,14 @@
 # Documentation
 
-A Blood Donating Companie's Front-end Website 'demo'. Created by [Akhlak Hossain Jim](http://akhlak-hossain-jim.github.io/) with HTML, (S)CSS, React.js, and icons from Material UI. View Live Demo [here](https://ahj-bloodbank-demo.web.app).
+A Blood Donating Companie's Front-end Website 'demo', created by [Akhlak Hossain Jim](http://akhlak-hossain-jim.github.io/) with HTML, (S)CSS, React.js, and icons from Material UI. View Live Demo [here](https://ahj-bloodbank-demo.web.app).
 
 ## Working With Code
 
 Working with the code is so easy
 
     First, download the zip file.
-    After download open the folder in the terminal (Powershell or cmd) and run `npm install`.
-    and you are good to go and play with it.
+    After downloading, open the folder in the terminal (Powershell or cmd) and run `npm install`, and
+    You are good to go and play with it.
 
 ## Folder Structure
 
@@ -32,7 +32,7 @@ Working folder structered in below nasting tree:
         
 ## Using code 
 
-All codes and style sheets are in the same name. All signUp file styles are defined in a single file `_signup.scss`. All dashboard styles are defined in `_dashboard.scss`. But working with these files is also easy they all have commented names written before rules. I tried to name all class names relative to the component. I tried to define all styles for pages that are so specifically targeted for better usability.
+All codes and style sheets are in the same name. All signUp file styles are defined in a single file named `_signup.scss`. All dashboard styles are defined in `_dashboard.scss` named file. But working with these files is also easy they all have commented names written before rules. I tried to name all class names relative to the component. I tried to define all styles for pages that are so specifically targeted for better usability.
 ## Issues
 
     * This is only a front-end code.
