@@ -11,6 +11,7 @@ div {
       align-items: center;
       justify-content: center;
       display: grid;
+      //in this section the left hand side's logo with text beneath style rule are defined
       &.section_i {
         align-items: center;
         img {
@@ -31,12 +32,14 @@ div {
         }
       }
       &.section_ii {
+        // common styles are defined here
         form {
           display: grid;
+          justify-items: center;
           h1 {
             padding-bottom: 20px;
             max-width: 300px;
-            font-size: 35px;
+            font-size: 30px;
             font-family: "Roboto", sans-serif;
           }
           label {
@@ -54,16 +57,19 @@ div {
             border: none;
             border-radius: 35px;
           }
+          // sign up iii style rule defined
           .radios {
-            margin-bottom: 20px;
+            margin: 30px auto;
+            justify-items: center;
+            grid-gap: 20px;
             div {
               &.select {
                 color: #c70100;
                 border: solid 1px #c70100;
-                height: 80px;
-                width: 80px;
+                height: 70px;
+                width: 70px;
                 border-radius: 50%;
-                font-size: 25px !important;
+                font-size: 22px !important;
                 align-items: center;
                 justify-content: center;
                 &.red {
@@ -83,6 +89,8 @@ div {
               }
             }
           }
+          // sign up iv & v style rule defined
+
           .weights,
           .genders {
             padding: 40px 0;
@@ -117,6 +125,8 @@ div {
               }
             }
           }
+          // sign up f style rule defined
+
           .file_upload {
             display: flex;
             align-items: center;
