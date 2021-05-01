@@ -1,0 +1,8 @@
+@media (max-width: 768px) {
+    body{
+        display: none;
+    }
+    body::before {
+        content: "Please open in a learge screen";
+    }
+}
