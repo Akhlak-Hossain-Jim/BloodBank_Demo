@@ -25,9 +25,13 @@ import NotificationBox from "../../components/NotificationBox";
 const shareIcon = <ShareIcon />;
 
 function Notification() {
+  const revealNav = () => {
+    document.querySelector("#mainNav").classList.toggle("fly");
+  };
+
   return (
     <div className="dashboard grid_parent grid_fiveCol">
-      <nav className="grid_parent">
+      <nav className="grid_parent" id="mainNav">
         <img src={logo} alt="" />
         <Link to="/Dashboard/">
           <HomeIcon className="dashboardico" />
@@ -66,7 +70,7 @@ function Notification() {
               <h6>Top Rated Donor</h6>
             </div>
             <img src={avater} alt="" />
-            <MoreVertIcon className="vertico" />
+            <MoreVertIcon className="vertico" onClick={revealNav} />
           </div>
         </header>
         <section className="notifications">

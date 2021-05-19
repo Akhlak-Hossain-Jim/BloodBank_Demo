@@ -14,7 +14,7 @@ function Signupvii() {
         </h1>
       </section>
       <section className="section_ii">
-        <form action="">
+        <form className="page-7" action="">
           <h1>How Old Are You?</h1>
           <label for="years">
             <p className="t_center">I am</p>
@@ -30,7 +30,7 @@ function Signupvii() {
           </label>
           <label for="mounth">
             <input
-              type="Text"
+              type="month"
               id="mounth"
               name="mounth"
               placeholder="January"

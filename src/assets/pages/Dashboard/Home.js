@@ -19,13 +19,16 @@ import logo from "../../image/logo512.png";
 import poster from "../../image/poster 1.png";
 import avater from "../../image/male.png";
 import cover from "../../image/camp.png";
-import map from "../../image/map.png";
 import stat from "../../image/stat.png";
 
 function Home() {
+  const revealNav = () => {
+    document.querySelector("#mainNav").classList.toggle("fly");
+  };
+
   return (
     <div className="dashboard grid_parent grid_fiveCol">
-      <nav className="grid_parent">
+      <nav className="grid_parent" id="mainNav">
         <img src={logo} alt="/Dashboard/" />
         <Link className="active" to="">
           <HomeIcon className="dashboardico" />
@@ -49,12 +52,14 @@ function Home() {
         </Link>
         <img className="poster" src={poster} alt="" />
       </nav>
-      <section className="dashboard grid_parent grid_fourCol grid_sixRow">
+      <section className="dashboard grid_parent grid_fourCol">
         <header>
           <div className="left_col">
             <h3>Campaign</h3>
-            <h6>Available</h6>
-            <ToggleOnIcon className="toggleico" />
+            <div>
+              <h6>Available</h6>
+              <ToggleOnIcon className="toggleico" />
+            </div>
           </div>
           <div className="right_col">
             <div>
@@ -62,14 +67,16 @@ function Home() {
               <h6>Top Rated Donor</h6>
             </div>
             <img src={avater} alt="" />
-            <MoreVertIcon className="vertico" />
+            <MoreVertIcon className="vertico" onClick={revealNav} />
           </div>
         </header>
         <section className="rowii_coli">
           <ArrowBackIosIcon className="arrowico" />
-          <img src={cover} alt="" />
-          <img src={cover} alt="" />
-          <img src={cover} alt="" />
+          <div>
+            <img src={cover} alt="" />
+            <img className="img-2" src={cover} alt="" />
+            <img className="img-3" src={cover} alt="" />
+          </div>
           <ArrowForwardIosIcon className="arrowico l" />
         </section>
         <section className="rowiii_coli">
@@ -125,7 +132,21 @@ function Home() {
         </section>
         <section className="map_container">
           <h3>Map</h3>
-          <img src={map} alt="" />
+          <div className="mapouter">
+            <div className="gmap_canvas">
+              <iframe
+                title="ikjdkj"
+                width="499"
+                height="271"
+                id="gmap_canvas"
+                src="https://maps.google.com/maps?q=dhaka&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                frameborder="0"
+                scrolling="no"
+                marginheight="0"
+                marginwidth="0"
+              ></iframe>
+            </div>
+          </div>
         </section>
       </section>
     </div>

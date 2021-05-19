@@ -4,9 +4,12 @@
 div {
   &.signup {
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     align-items: center;
     justify-content: center;
+    @media (max-width: 768px) {
+      padding-bottom: 80px;
+    }
     section {
       align-items: center;
       justify-content: center;
@@ -18,17 +21,18 @@ div {
           justify-self: center;
           align-self: center;
           width: auto;
-          height: 300px;
-          @media (max-width: 768px) {
-            height: 200px;
-          }
+          height: 180px;
         }
         h1 {
           max-width: 400px;
           text-align: center;
           font-weight: 300 !important;
-          font-size: 30px;
+          font-size: 18px;
           color: #343434;
+          @media (max-width: 768px) {
+            max-width: 80%;
+            margin: auto;
+          }
         }
       }
       &.section_ii {
@@ -39,37 +43,45 @@ div {
           h1 {
             padding-bottom: 20px;
             max-width: 300px;
-            font-size: 30px;
+            font-size: 25px;
             font-family: "Roboto", sans-serif;
+            text-align: center;
+            @media (max-width: 768px) {
+              padding-top: 30px;
+            }
           }
           label {
             color: #949494;
-            font-size: 18px;
+            font-size: 14px;
+            .visibility_icon {
+              position: absolute;
+              margin-top: 36px;
+              margin-left: -45px;
+            }
           }
           input {
             margin: 20px auto;
-            width: 350px;
-            height: 80px;
+            width: 300px;
             color: #949494;
-            font-size: 20px;
-            padding: 40px;
+            font-size: 14px;
+            padding: 20px 30px;
             background-color: #edf0f5;
             border: none;
             border-radius: 35px;
           }
           // sign up iii style rule defined
           .radios {
-            margin: 30px auto;
+            margin: 20px auto;
             justify-items: center;
-            grid-gap: 20px;
+            grid-gap: 10px;
             div {
               &.select {
                 color: #c70100;
                 border: solid 1px #c70100;
-                height: 70px;
-                width: 70px;
+                height: 50px;
+                width: 50px;
                 border-radius: 50%;
-                font-size: 22px !important;
+                font-size: 14px !important;
                 align-items: center;
                 justify-content: center;
                 &.red {
@@ -80,8 +92,8 @@ div {
                   position: absolute;
                   margin: 0;
                   padding: 0;
-                  width: 80px;
-                  height: 80px;
+                  width: 50px;
+                  height: 50px;
                   outline: none;
                   opacity: 0 !important;
                   cursor: pointer;
@@ -93,9 +105,11 @@ div {
 
           .weights,
           .genders {
-            padding: 40px 0;
+            padding: 30px 0;
+            display: flex;
             .weight,
             .gender {
+              position: relative;
               margin: auto 20px;
               display: grid;
               background-color: #f6f7f9;
@@ -103,38 +117,43 @@ div {
               padding: 20px;
               border-radius: 20px;
               box-shadow: 0 0 5px #f6f6f6;
+              overflow: hidden;
               .top_arrow {
                 background-color: #c70100 !important;
                 padding: 5px;
+                position: absolute;
                 color: #edf0f5;
-                font-size: 40px !important;
+                font-size: 30px !important;
                 border-radius: 50%;
-                margin-top: -27px;
-                margin-left: -27px;
+                margin-top: 2px;
+                margin-left: 2px;
               }
               img {
-                width: 120px;
+                width: 70px;
                 border-radius: 50%;
               }
               p {
                 padding: 30px 0 0 0;
                 text-align: center;
-                font-size: 20px;
+                font-size: 14px;
                 color: #343434;
                 font-weight: 500;
+              }
+              input {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
               }
             }
           }
           // sign up f style rule defined
 
           .file_upload {
-            display: flex;
-            align-items: center;
-            justify-items: center;
-            margin: 50px 0;
-            align-self: center;
-            height: 200px;
-            width: 200px;
+            display: grid;
+            place-items: center;
+            height: 180px;
+            width: 180px;
             box-shadow: 0 0 5px #f6f6f6;
             background-color: #f6f7f9;
             border-radius: 50%;
@@ -142,8 +161,8 @@ div {
               position: absolute;
               margin: 0;
               padding: 0;
-              width: 200px;
-              height: 200px;
+              width: 180px;
+              height: 180px;
               outline: none;
               opacity: 0 !important;
               cursor: pointer;
@@ -151,37 +170,22 @@ div {
             .drag-text {
               padding: 0 20%;
               display: grid;
+              place-items: center;
               text-align: center !important;
               .upico {
                 justify-self: center !important;
-                font-size: 50px !important;
+                font-size: 40px !important;
                 color: #c70100;
               }
               h3 {
+                font-size: 12px;
                 font-weight: 900 !important;
               }
             }
           }
-          .visibility_icon {
-            margin-top: -21%;
-            margin-left: 82%;
-          }
-          a {
-            &.c_width {
-              margin-top: 20px !important;
-              width: 350px !important;
-              justify-self: center;
-              font-size: 20px !important;
-              padding: 25px;
-              border-radius: 50px;
-              text-decoration: none;
+          &.page-7 {
+            input {
               text-align: center;
-              background-color: #c70100;
-              color: #fff;
-              @media (max-width: 768px) {
-                font-size: 20px !important;
-                padding: 24px 50px;
-              }
             }
           }
         }

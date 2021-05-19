@@ -5,6 +5,20 @@ import logomale from "../../image/male.png";
 import logofemale from "../../image/female.png";
 
 function Signupv() {
+  const opi = () => {
+    document.querySelector("#option-1").style.backgroundColor = "#a7a7a7";
+    document.querySelector("#option-2").style.backgroundColor = "#f6f7f9";
+    document.querySelector("#male").checked = true;
+    document.querySelector("#female").checked = false;
+  };
+
+  const opii = () => {
+    document.querySelector("#option-2").style.backgroundColor = "#a7a7a7";
+    document.querySelector("#option-1").style.backgroundColor = "#f6f7f9";
+    document.querySelector("#male").checked = false;
+    document.querySelector("#female").checked = true;
+  };
+
   return (
     <div className="signup grid_parent grid_twoCol">
       <section className="section_i">
@@ -19,14 +33,14 @@ function Signupv() {
         <form action="">
           <h1>Let Us Know Your Gender</h1>
           <div className="genders grid_parent grid_twoCol">
-            <div className="gender">
+            <div className="gender" id="option-1" onClick={opi}>
               <img src={logomale} alt="" />
-              <br />
+              <input type="radio" name="male" id="male" />
               <p>Male</p>
             </div>
-            <div className="weight">
+            <div className="weight" id="option-2" onClick={opii}>
               <img src={logofemale} alt="" />
-              <br />
+              <input type="radio" name="female" id="female" />
               <p>Female</p>
             </div>
           </div>

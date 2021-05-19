@@ -11,10 +11,13 @@ div {
     height: 100vh;
     align-items: center;
     justify-content: center;
+    @media (max-width: 768px) {
+      padding-bottom: 80px;
+    }
     img {
       justify-self: center;
       width: auto;
-      height: 400px;
+      height: 200px;
       @media (max-width: 768px) {
         height: 200px;
       }
@@ -28,61 +31,46 @@ div {
         h1 {
           justify-self: center;
           padding-bottom: 20px;
-          font-size: 30px;
+          font-size: 25px;
         }
         label {
           color: #949494;
-          font-size: 18px;
+          font-size: 14px;
         }
         input {
           margin: 20px auto;
           width: 300px;
-          height: 80px;
           color: #cacdd1;
-          font-size: 20px;
-          padding: 40px;
+          font-size: 14px;
+          padding: 20px 30px;
           background-color: #edf0f5;
           border: none;
           border-radius: 35px;
         }
         .visibility_icon {
-          margin-top: -24%;
-          margin-left: 85%;
-        }
-        a {
-          &.c_width {
-            margin-top: 20px !important;
-            width: 300px !important;
-            justify-self: center;
-            font-size: 20px !important;
-            padding: 25px;
-            border-radius: 50px;
-            text-decoration: none;
-            text-align: center;
-            background-color: #c70100;
-            color: #fff;
-            @media (max-width: 768px) {
-              font-size: 20px !important;
-              padding: 24px 50px;
-            }
-          }
+          position: absolute;
+          margin-top: 36px;
+          margin-left: -45px;
         }
       }
       a {
         &.lite {
           padding: 20px 0;
           color: #949494;
-          font-size: 15px;
+          font-size: 12px;
         }
       }
       p {
-        font-size: 15px;
+        font-size: 12px;
         text-align: center;
         color: #949494;
         .dark {
           color: #353434 !important;
           text-decoration: none;
           font-weight: 600 !important;
+          &:hover {
+            text-decoration: underline;
+          }
         }
       }
     }

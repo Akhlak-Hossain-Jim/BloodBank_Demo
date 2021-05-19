@@ -17,9 +17,13 @@ import poster from "../../image/poster 1.png";
 import avater from "../../image/male.png";
 
 function Donor() {
+  const revealNav = () => {
+    document.querySelector("#mainNav").classList.toggle("fly");
+  };
+
   return (
     <div className="dashboard grid_parent grid_fiveCol">
-      <nav className="grid_parent">
+      <nav className="grid_parent" id="mainNav">
         <img src={logo} alt="" />
         <Link to="/Dashboard/">
           <HomeIcon className="dashboardico" />
@@ -52,7 +56,7 @@ function Donor() {
               <h6>Top Rated Donor</h6>
             </div>
             <img src={avater} alt="" />
-            <MoreVertIcon className="vertico" />
+            <MoreVertIcon className="vertico" onClick={revealNav} />
           </div>
         </header>
       </section>

@@ -38,10 +38,14 @@ function Profile() {
     document.querySelector("#donation").classList.add("drown");
   }
 
+  const revealNav = () => {
+    document.querySelector("#mainNav").classList.toggle("fly");
+  };
+
   return (
     <div>
       <div className="dashboard grid_parent grid_fiveCol">
-        <nav className="grid_parent">
+        <nav className="grid_parent" id="mainNav">
           <img src={logo} alt="" />
           <Link to="/Dashboard/">
             <HomeIcon className="dashboardico" />
@@ -65,7 +69,7 @@ function Profile() {
           </Link>
           <img className="poster" src={poster} alt="" />
         </nav>
-        <section className="dashboard twelvehead profile_container grid_parent grid_twelveCol grid_sixRow">
+        <section className="dashboard twelvehead profile_container grid_parent grid_twelveCol">
           <header>
             <div className="left_col">
               <Link to="/Dashboard/donations/">
@@ -79,7 +83,7 @@ function Profile() {
                 <h6>Top Rated Donor</h6>
               </div>
               <img src={avater} alt="" />
-              <MoreVertIcon className="vertico" />
+              <MoreVertIcon className="vertico" onClick={revealNav} />
             </div>
           </header>
           <section className="profile grid_parent">
@@ -112,67 +116,73 @@ function Profile() {
                 <hr />
                 <div className="progress_bar">
                   <div className="progress"></div>
-                  <p>
-                    <span>3</span> days until you can donate again.
-                  </p>
                 </div>
+                <p>
+                  <span>3</span> days until you can donate again.
+                </p>
               </div>
             </div>
           </section>
           <section className="Status">
-            <div className="nav">
-              <span className="nav_item active" id="itemi" onClick={navChangei}>
-                Donations
-              </span>
-              <span className="nav_item" id="itemii" onClick={navChangeii}>
-                Requests
-              </span>
-            </div>
-            <div id="donation">
-              <Appoinment
-                month="Dec"
-                day="7"
-                hospitalName="IBN Shinah"
-                quantity="1"
-                dayLeft="6"
-              />
-              <Appoinment
-                month="Dec"
-                day="7"
-                hospitalName="IBN Shinah"
-                quantity="1"
-                dayLeft="6"
-              />
-              <Appoinment
-                month="Dec"
-                day="7"
-                hospitalName="IBN Shinah"
-                quantity="1"
-                dayLeft="6"
-              />
-            </div>
-            <div className="drown" id="request">
-              <Appoinment
-                month="Jan"
-                day="17"
-                hospitalName="IBN Shinah"
-                quantity="1"
-                dayLeft="6"
-              />
-              <Appoinment
-                month="Jan"
-                day="17"
-                hospitalName="IBN Shinah"
-                quantity="1"
-                dayLeft="6"
-              />
-              <Appoinment
-                month="Jan"
-                day="17"
-                hospitalName="IBN Shinah"
-                quantity="1"
-                dayLeft="6"
-              />
+            <div>
+              <div className="nav">
+                <span
+                  className="nav_item active"
+                  id="itemi"
+                  onClick={navChangei}
+                >
+                  Donations
+                </span>
+                <span className="nav_item" id="itemii" onClick={navChangeii}>
+                  Requests
+                </span>
+              </div>
+              <div id="donation">
+                <Appoinment
+                  month="Dec"
+                  day="7"
+                  hospitalName="IBN Shinah"
+                  quantity="1"
+                  dayLeft="6"
+                />
+                <Appoinment
+                  month="Dec"
+                  day="7"
+                  hospitalName="IBN Shinah"
+                  quantity="1"
+                  dayLeft="6"
+                />
+                <Appoinment
+                  month="Dec"
+                  day="7"
+                  hospitalName="IBN Shinah"
+                  quantity="1"
+                  dayLeft="6"
+                />
+              </div>
+              <div className="drown" id="request">
+                <Appoinment
+                  month="Jan"
+                  day="17"
+                  hospitalName="IBN Shinah"
+                  quantity="1"
+                  dayLeft="6"
+                />
+                <Appoinment
+                  month="Jan"
+                  day="17"
+                  hospitalName="IBN Shinah"
+                  quantity="1"
+                  dayLeft="6"
+                />
+                <Appoinment
+                  month="Jan"
+                  day="17"
+                  hospitalName="IBN Shinah"
+                  quantity="1"
+                  dayLeft="6"
+                />
+              </div>
             </div>
           </section>
           <section className="badges">

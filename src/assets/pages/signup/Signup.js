@@ -43,11 +43,11 @@ function Signup() {
               name="password"
               placeholder="*****"
             />
+            <VisibilityIcon
+              className="visibility_icon"
+              style={{ color: "red" }}
+            />
           </label>
-          <VisibilityIcon
-            className="visibility_icon"
-            style={{ color: "red" }}
-          />
           <Link className="c_width" to="/signup/step2/">
             Next
           </Link>

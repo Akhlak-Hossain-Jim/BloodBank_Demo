@@ -25,9 +25,13 @@ import HistoryBox from "../../components/HistoryBox";
 import ReviewBox from "../../components/ReviewBox";
 
 function Donations() {
+  const revealNav = () => {
+    document.querySelector("#mainNav").classList.toggle("fly");
+  };
+
   return (
     <div className="dashboard grid_parent grid_fiveCol">
-      <nav className="grid_parent">
+      <nav className="grid_parent" id="mainNav">
         <img src={logo} alt="" />
         <Link to="/Dashboard/">
           <HomeIcon className="dashboardico" />
@@ -51,7 +55,7 @@ function Donations() {
         </Link>
         <img className="poster" src={poster} alt="" />
       </nav>
-      <section className="dashboard doantion_container twelvehead grid_parent grid_twelveCol grid_fiveRow">
+      <section className="dashboard doantion_container twelvehead grid_parent grid_twelveCol">
         <header>
           <div className="left_col">
             <Link to="/Dashboard/profile/">
@@ -65,7 +69,7 @@ function Donations() {
               <h6>Top Rated Donor</h6>
             </div>
             <img src={avater} alt="" />
-            <MoreVertIcon className="vertico" />
+            <MoreVertIcon className="vertico" onClick={revealNav} />
           </div>
         </header>
         <section className="hospitalDescription">
