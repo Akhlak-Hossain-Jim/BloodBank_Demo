@@ -5,22 +5,15 @@ import "./scss/main.scss";
 // pages Importing
 
 import Welcome from "./pages/Welcome";
-import Signin from "./pages/Signin";
-import Signup from "./pages/signup/Signup";
-import Signupii from "./pages/signup/Signupii";
 import PageNotFound from "./pages/PageNotFound";
-import Signupiii from "./pages/signup/Signupiii";
-import Signupiv from "./pages/signup/Signupiv";
-import Signupv from "./pages/signup/Signupv";
-import Signupvi from "./pages/signup/Signupvi";
-import Signupvii from "./pages/signup/Signupvii";
-import Signupf from "./pages/signup/Signupf";
+import Signup from "./pages/signup/";
 import Home from "./pages/Dashboard/Home";
 import Profile from "./pages/Dashboard/Profile";
 import Notification from "./pages/Dashboard/Notification";
 import Donor from "./pages/Dashboard/Donor";
 import Setting from "./pages/Dashboard/Setting";
 import Donations from "./pages/Dashboard/Donations";
+import SignIn from "./pages/SignIn";
 
 function App() {
   return (
@@ -31,31 +24,10 @@ function App() {
             <Welcome />
           </Route>
           <Route exact path="/signIn/">
-            <Signin />
+            <SignIn />
           </Route>
-          <Route exact path="/signup/step1/">
+          <Route exact path="/signup/">
             <Signup />
-          </Route>
-          <Route exact path="/signup/step2/">
-            <Signupii />
-          </Route>
-          <Route exact path="/signup/step3/">
-            <Signupiii />
-          </Route>
-          <Route exact path="/signup/step4/">
-            <Signupiv />
-          </Route>
-          <Route exact path="/signup/step5/">
-            <Signupv />
-          </Route>
-          <Route exact path="/signup/step6/">
-            <Signupvi />
-          </Route>
-          <Route exact path="/signup/step7/">
-            <Signupvii />
-          </Route>
-          <Route exact path="/signup/step8/">
-            <Signupf />
           </Route>
           <Route exact path="/Dashboard/">
             <Home />
