@@ -2,7 +2,7 @@
   text-align: center;
 }
 div {
-  &.signup {
+  &.signUp {
     width: 100vw;
     min-height: 100vh;
     align-items: center;
@@ -10,12 +10,16 @@ div {
     @media (max-width: 768px) {
       padding-bottom: 80px;
     }
+    @media (max-width: 548px) {
+      padding: 20px;
+      padding-bottom: 80px;
+    }
     section {
       align-items: center;
       justify-content: center;
       display: grid;
       //in this section the left hand side's logo with text beneath style rule are defined
-      &.section_i {
+      &.signUp_left {
         align-items: center;
         img {
           justify-self: center;
@@ -35,14 +39,18 @@ div {
           }
         }
       }
-      &.section_ii {
+      &.signUp_right {
+        display: flex;
         // common styles are defined here
-        form {
+        width: 100%;
+        .form {
           display: grid;
           justify-items: center;
+          // margin: auto;
+          width: min(300px, 100%);
           h1 {
             padding-bottom: 20px;
-            max-width: 300px;
+            width: 100%;
             font-size: 25px;
             font-family: "Roboto", sans-serif;
             text-align: center;
@@ -53,21 +61,42 @@ div {
           label {
             color: #949494;
             font-size: 14px;
-            .visibility_icon {
-              position: absolute;
-              margin-top: 36px;
-              margin-left: -45px;
-            }
+            width: 100%;
+            display: flex;
+            flex-direction: column;
           }
           input {
             margin: 20px auto;
-            width: 300px;
+            width: 100%;
             color: #949494;
             font-size: 14px;
             padding: 20px 30px;
             background-color: #edf0f5;
             border: none;
             border-radius: 35px;
+          }
+          .password {
+            display: flex;
+            align-items: center;
+            margin: 20px auto;
+            width: 100%;
+            color: #3f3f3f;
+            font-size: 14px;
+            padding: 20px 30px;
+            background-color: #edf0f5;
+            border: none;
+            border-radius: 35px;
+            & > input {
+              flex: 1;
+              padding: 0;
+              margin: 0;
+              outline: 0;
+              border: 0;
+            }
+            .visibility_icon {
+              margin: auto;
+              font-size: 20px;
+            }
           }
           // sign up iii style rule defined
           .radios {
@@ -78,25 +107,17 @@ div {
               &.select {
                 color: #c70100;
                 border: solid 1px #c70100;
-                height: 50px;
-                width: 50px;
+                width: 60px;
+                aspect-ratio: 1/1;
                 border-radius: 50%;
-                font-size: 14px !important;
+                font-size: 16px !important;
+                font-weight: 500;
                 align-items: center;
                 justify-content: center;
-                &.red {
+                cursor: pointer;
+                &.selected {
                   color: #fff;
                   background-color: #c70100;
-                }
-                input {
-                  position: absolute;
-                  margin: 0;
-                  padding: 0;
-                  width: 50px;
-                  height: 50px;
-                  outline: none;
-                  opacity: 0 !important;
-                  cursor: pointer;
                 }
               }
             }
@@ -117,9 +138,11 @@ div {
               padding: 20px;
               border-radius: 20px;
               box-shadow: 0 0 5px #f6f6f6;
+              border: 1px solid #c70100;
               overflow: hidden;
+              cursor: pointer;
               .top_arrow {
-                background-color: #c70100 !important;
+                background-color: #c70100;
                 padding: 5px;
                 position: absolute;
                 color: #edf0f5;
@@ -129,21 +152,26 @@ div {
                 margin-left: 2px;
               }
               img {
-                width: 70px;
+                width: min(70px, 100%);
                 border-radius: 50%;
               }
               p {
                 padding: 30px 0 0 0;
                 text-align: center;
-                font-size: 14px;
+                font-size: 16px;
                 color: #343434;
-                font-weight: 500;
+                font-weight: 700;
               }
-              input {
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                opacity: 0;
+              &.active {
+                background-color: #c70100;
+                color: #f6f6f6 !important;
+                .top_arrow {
+                  background-color: #f6f6f6;
+                  color: #c70100;
+                }
+                p {
+                  color: #f6f6f6;
+                }
               }
             }
           }
@@ -157,22 +185,35 @@ div {
             box-shadow: 0 0 5px #f6f6f6;
             background-color: #f6f7f9;
             border-radius: 50%;
+            position: relative;
             input {
               position: absolute;
               margin: 0;
               padding: 0;
-              width: 180px;
-              height: 180px;
+              width: 100%;
+              height: 100%;
               outline: none;
               opacity: 0 !important;
+              z-index: 5;
               cursor: pointer;
+            }
+            &__image {
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              object-fit: scale-down;
+              object-position: center;
             }
             .drag-text {
               padding: 0 20%;
               display: grid;
               place-items: center;
               text-align: center !important;
-              .upico {
+              .upIco {
                 justify-self: center !important;
                 font-size: 40px !important;
                 color: #c70100;

@@ -5,8 +5,8 @@ a {
   }
 }
 
-div {
-  &.signin {
+main {
+  &.signIn {
     width: 100vw;
     height: 100vh;
     align-items: center;
@@ -40,17 +40,35 @@ div {
         input {
           margin: 20px auto;
           width: 300px;
-          color: #cacdd1;
+          color: #3f3f3f;
           font-size: 14px;
           padding: 20px 30px;
           background-color: #edf0f5;
           border: none;
           border-radius: 35px;
         }
-        .visibility_icon {
-          position: absolute;
-          margin-top: 36px;
-          margin-left: -45px;
+        .password {
+          display: flex;
+          align-items: center;
+          margin: 20px auto;
+          width: 300px;
+          color: #3f3f3f;
+          font-size: 14px;
+          padding: 20px 30px;
+          background-color: #edf0f5;
+          border: none;
+          border-radius: 35px;
+          & > input {
+            flex: 1;
+            padding: 0;
+            margin: 0;
+            outline: 0;
+            border: 0;
+          }
+          .visibility_icon {
+            margin: auto;
+            font-size: 20px;
+          }
         }
       }
       a {

@@ -4,18 +4,27 @@
 
 .grid_twoCol {
   grid-template-columns: repeat(2, 1fr);
-  @media (max-width: 768px) {
+  @media (max-width: 548px) {
     grid-template-columns: repeat(1, 1fr);
   }
 }
 
 .grid_threeCol {
   grid-template-columns: repeat(3, 100px);
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: 548px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 .grid_fourCol {
   grid-template-columns: repeat(4, 1fr);
   @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: 548px) {
     grid-template-columns: repeat(1, 1fr);
   }
 }

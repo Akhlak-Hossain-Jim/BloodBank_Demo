@@ -12,8 +12,13 @@
 
 // page directory imported
 
-@import "./pages/pagenotfound";
+@import "./pages/pageNotFound";
 @import "./pages/welcome";
-@import "./pages/signin";
-@import "./pages/signup";
+@import "./pages/signIn";
+@import "./pages/signUp";
 @import "./pages/dashboard";
+
+.app-container {
+  width: min(1440px, 100%);
+  margin: 0 auto;
+}
