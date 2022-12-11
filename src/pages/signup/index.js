@@ -10,7 +10,7 @@ import ProfileImage from "./ProfileImage";
 import Weight from "./Weight";
 
 function Signup() {
-  const [Step, setStep] = useState(7);
+  const [Step, setStep] = useState(0);
 
   const [UserName, setUserName] = useState();
   const [Email, setEmail] = useState();
